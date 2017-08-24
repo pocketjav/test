@@ -8,7 +8,7 @@ console.log("El area de el rectangulo es igual a: "+ area);
 //Area de Circulo
 var radio = 4;
 var pi = 3.1416;
-var areaC = pi * radio * radio;
+var areaC = pi * Math.pow(radio,2);
 console.log("El area del circulo es:"+ areaC );
 // area es 50.2656
 
@@ -26,3 +26,14 @@ var radio = 4;
 var volumen = pi * x * radio*radio*radio;
 console.log("El Volumen de la esfera es:"+ volumen );
 // volumen es 268.0832
+
+//generar console log dentro de una funcion
+//como hacer funcion
+//variable global
+//como hablarle a la funcion
+
+var  nombre = "Javier";
+function mostrar(){
+    console.log("Hola:" +nombre)
+}
+mostrar();
