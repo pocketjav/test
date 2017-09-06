@@ -37,3 +37,14 @@ function mostrar(){
     console.log("Hola:" +nombre)
 }
 mostrar();
+
+//clase
+function saludar10(){
+    let i=0;
+    for( i; i<10; i++);{
+console.log(`hola ${nombre}`);
+    }
+console.log(`El valor de i es ${i}`);//` ${} concatenar variables
+}
+ 
+//
