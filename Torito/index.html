@@ -94,7 +94,7 @@ function keyUpHandler(e){
 function drawBall(){
     ctx.beginPath();
     ctx.arc(x,y,ballRadius,0, Math.PI*2);
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "getRandomColor(x)";
     ctx.fill();
     ctx.closePath();
 }
@@ -103,7 +103,7 @@ function drawPaddle(){
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight,
     paddleWidth, paddleHeight)
-    ctx.fillStyle ="orange";
+    ctx.fillStyle ="getRandomColor()";
     ctx.fill();
     ctx.closePath();
 }
@@ -133,18 +133,22 @@ drawPaddle();
 if(x + dx >canvas.width-ballRadius || x + dx <
 ballRadius){
     dx = -dx;
+    getRandomColor();
 }
 if(y + dy >canvas.height-ballRadius || y + dy <
 ballRadius){
     dy = -dy;
+    getRandomColor()
 }
 
 if(y + dy < ballRadius){
-    
+    getRandomColor()
     dy = -dy
 }else if(y + dy > canvas.height-ballRadius){
+    getRandomColor()
     if(x>paddleX && x<paddleX + paddleWidth){
         dy = -dy;
+        getRandomColor()
     }else{
     alert("Game Over");
     document.location.reload();
